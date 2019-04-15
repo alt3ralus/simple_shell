@@ -12,6 +12,7 @@ int main(void)
 	char *sep_arg = "\t \n", *sep_var = "=:", *var = "PATH", *own_env = NULL;
 	int i;
 
+	signal(SIGINT, SIG_IGN);
 	while (read != -1)
 	{
 		read = getline(&line, &len, stdin);

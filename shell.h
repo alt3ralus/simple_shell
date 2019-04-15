@@ -11,9 +11,15 @@
 #include <signal.h>
 #include <errno.h>
 extern char **environ;
-typedef struct built {
+/**
+ *struct built - Read and execute the builtins functions
+ *@name: String that checks for the command on the stdin
+ *@fun: Name of the associated function
+ */
+typedef struct built
+{
 	char *name;
-	int (*fun) (void);
+	int (*fun)(void);
 } built_s;
 int xexit(void);
 int xenv(void);

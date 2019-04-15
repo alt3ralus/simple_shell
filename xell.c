@@ -14,7 +14,6 @@ int main(void)
 
 	while (read != -1)
 	{
-		write(1, "$ ", 2);
 		read = getline(&line, &len, stdin);
 		i = 0;
 		if (read != 1 && read != -1)

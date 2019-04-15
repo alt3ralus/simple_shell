@@ -40,6 +40,5 @@ int main(void)
 		}
 	}
 	free(line);
-	write(1, "\n", 1);
 	exit(EXIT_SUCCESS);
 }

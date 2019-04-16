@@ -26,10 +26,10 @@ int get_env(char *var, char **own_envir)
 		i++;
 	}
 	free(compare);
+	if (environ[i] == NULL)
+		return (0);
 	*own_envir = malloc(sizeof(char) * (len + 1));
-	/* printf("get_env malloc %p\n", (void*)*own_envir); */
 	*own_envir = _strncpy(*own_envir, environ[i], len);
-	/*dont forget free after use*/
 	return (0);
 
 }

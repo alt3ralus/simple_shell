@@ -19,7 +19,7 @@ int execute(char **path, char **args)
 		{
 			if (fork() == 0)
 			{
-				if (execve(path_arg, args, NULL) != 0)
+				if (execve(path_arg, args, environ) != 0)
 				{
 					perror("./shell");
 					exit(-1);

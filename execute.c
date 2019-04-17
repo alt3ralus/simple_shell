@@ -8,9 +8,7 @@
  */
 int execute(char **path, char **args)
 {
-	int i = 0;
-	int status;
-	int len;
+	int i = 0, status, len;
 	char *path_arg;
 
 	path_arg = args[0];
@@ -21,7 +19,7 @@ int execute(char **path, char **args)
 		{
 			if (fork() == 0)
 			{
-				if (execve(path_arg, args, NULL) != 0)
+				if (execve(path_arg, args, environ) != 0)
 				{
 					perror("./shell");
 					exit(-1);
@@ -30,7 +28,8 @@ int execute(char **path, char **args)
 			else
 			{
 				wait(&status);
-				free(path_arg);
+				if (i > 1)
+					free(path_arg);
 				return (0);
 			}
 		}

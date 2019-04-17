@@ -12,9 +12,9 @@ int main(void)
 	char *sep_arg = "\t \n", *sep_var = "=:", *var = "PATH", *own_env = NULL;
 	int i;
 
+	signal(SIGINT, SIG_IGN);
 	while (read != -1)
 	{
-		write(1, "$ ", 2);
 		read = getline(&line, &len, stdin);
 		i = 0;
 		if (read != 1 && read != -1)
@@ -41,6 +41,5 @@ int main(void)
 		}
 	}
 	free(line);
-	write(1, "\n", 1);
 	exit(EXIT_SUCCESS);
 }

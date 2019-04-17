@@ -2,46 +2,22 @@
 .\" Contact 775@holbertonschool.com, 755@holbertonschool.com or 729@holbertonschool.com
 .TH SIMPLE_SHELL 1 "April 17 2019" "1.0" "simple_shell Man Page"
 .SH NAME
-	simple_shell \- Another shell
+	simple_shell \- Another command interpreter for Linux like OS family
 
 .SH SYNOPSIS
 	simple_shell [command] [flags] [file]
 
 .SH DESCRIPTION
-	simple_shell is a command interpreter. This version includes the reading
-	of commands, management of flags, semicolon operator, 
+	simple_shell is a command interpreter. This version was compiled with GCC compiler (gcc 4.8.4, with -Wall
+	-Werror -Wextra and -pedantic flags) and was created on ubuntu 14.05.5 LTS. Includes the reading of
+	commands, management of flags, command separator (;), among other functions.
 .PP
-	d, i
-.PP
-Signed decimal, being the result an int type of
-data
-.PP
-c
-.PP
-Char type data and prints it out
-.PP
-s
-.PP
-String data
-.PP
-u
-.PP
-Unsigned integer
-.PP
-o
-.PP
-Octal value of the argument
-.PP
-X, x
-.PP
-Hexadecimal value of the argument
-
-.SH FORMAT OPTIONS
-The format options of _printf controls output formatted.
+	
 
 .SH SEE ALSO
-printf, putchar, puts, write, scanf
+	bash, sh
 
-.SH AUTHOR
-Fesus Rocuts <790@holbertonschool.com> and Juan Amaya <729@holbertonschool.com>
-Version 1.0 Includes only the conversion specifiers.
+.SH AUTHORS
+Miguel Angel Fajardo <miguel-angel.fajardo-caranton@holbertonschool.com>, Camilo Andrés Maldonado <andres.cante@holbertonschool.com> and Juan David Amaya Gaviria <juan-david.amaya-gaviria@holbertonschool.com>
+.PP
+Version 1.0 Includes Commands, options and flag management

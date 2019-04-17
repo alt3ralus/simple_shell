@@ -1,6 +1,33 @@
 ## Simple SHELL
 This project is about building a shell with the basic functions.
- 
+
+### Requirements
+You need a SO unix like (Linux). This program was make it on Ubuntu 14.05.5 LTS
+
+ ### Testing
+* You can test with interactive mode:
+```
+$ ./hsh
+($) / bin / ls
+hsh main.c shell.c
+($)
+($) exit
+$
+```
+* But also in non-interactive mode:
+```
+$ echo "/ bin / ls" | ./hsh
+hsh main.c shell.c test_ls_2
+$
+$ cat test_ls_2
+/ bin / ls
+/ bin / ls
+$
+$ cat test_ls_2 | ./hsh
+hsh main.c shell.c test_ls_2
+hsh main.c shell.c test_ls_2
+$
+```
 
 ### Who designed and implemented the original Unix operating system
 BELL lab: Ken Thompson feat. Dennis Ritchie, Douglas Mcllroy, (...).
@@ -20,3 +47,10 @@ The shell is the interface to communicate with the kernel.
 The shell receives commands written in commands.
 The system that is used to enter the instructions is the standard input (what is written in the keyboard),
 and to visualize uses the standard output (what appears on the screen).
+
+
+### Author
+
+Miguel FAjardo
+Juan Amaya
+Camilo Maldoando

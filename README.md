@@ -47,3 +47,10 @@ The shell is the interface to communicate with the kernel.
 The shell receives commands written in commands.
 The system that is used to enter the instructions is the standard input (what is written in the keyboard),
 and to visualize uses the standard output (what appears on the screen).
+
+
+### Author
+
+Miguel FAjardo
+Juan Amaya
+Camilo Maldoando
